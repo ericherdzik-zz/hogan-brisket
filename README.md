@@ -3,6 +3,8 @@ Hogan Brisket
 
 Hogan Brisket is an adapter for [Hogan.js](http://twitter.github.io/hogan.js/) templating in a [Brisket](https://github.com/bloomberg/brisket) application.
 
+[![Build Status](https://travis-ci.org/ericherdzik/hogan-brisket.svg)](https://travis-ci.org/ericherdzik/hogan-brisket)
+
 ## Usage
 
 As a prerequisite, refer to the [Brisket Documentation](https://github.com/bloomberg/brisket/blob/master/docs/brisket.view.md#setting-a-templating-engine) introducing templating for Brisket Views.
