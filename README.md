@@ -34,7 +34,6 @@ To make these templates available in your Brisket View, you need to specificy an
 
 ```javascript
 // IndexView.js
-
 var Brisket = require("brisket");
 var templates = require("./templates.js");
 
@@ -63,7 +62,6 @@ By defualt, Hogan Brisket makes all partials globally available to all of your t
 
 ```javascript
 // IndexView.js (with explicit partials)
-
 var Brisket = require("brisket");
 var templates = require("./templates.js");
 
