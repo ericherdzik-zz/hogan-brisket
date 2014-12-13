@@ -6,7 +6,7 @@ Hogan Brisket is an adapter for [Hogan.js](http://twitter.github.io/hogan.js/) t
 [![Build Status](https://travis-ci.org/ericherdzik/hogan-brisket.svg)](https://travis-ci.org/ericherdzik/hogan-brisket)
 
 ## Getting Started
-This Brisket plugin requires Brisket `1.x`
+This Brisket plugin requires Brisket `0.x`
 
 Please refer to [Brisket.View Documentation](https://github.com/bloomberg/brisket/blob/master/docs/brisket.view.md#setting-a-templating-engine) as it describes how to configure Brisket Views for templating.
 
