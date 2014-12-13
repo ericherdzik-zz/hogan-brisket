@@ -1,0 +1,33 @@
+{
+  "name": "hogan-brisket",
+  "version": "0.0.0",
+  "description": "Hogan.js adapter for Brisket",
+  "main": "hogan-brisket.js",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ericherdzik/hogan-brisket.git"
+  },
+  "keywords": [
+    "Brisket",
+    "Hogan.js",
+    "template"
+  ],
+  "author": "Eric Herdzik",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ericherdzik/hogan-brisket/issues"
+  },
+  "homepage": "https://github.com/ericherdzik/hogan-brisket",
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "jasmine-node": "~2.0.0-beta4",
+    "brisket": "~0.23.0",
+    "grunt-contrib-jshint": "~0.10.0"
+  },
+  "peerDependencies": {
+    "brisket": "0.x"
+  }
+}
