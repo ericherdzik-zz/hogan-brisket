@@ -25,7 +25,8 @@
     "grunt": "~0.4.5",
     "jasmine-node": "~2.0.0-beta4",
     "brisket": "~0.23.0",
-    "grunt-contrib-jshint": "~0.10.0"
+    "grunt-contrib-jshint": "~0.10.0",
+    "grunt-cli": "~0.1.13"
   },
   "peerDependencies": {
     "brisket": "0.x"
