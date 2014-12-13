@@ -90,7 +90,7 @@ In this example, the only partial available within your template would be the he
 <header>{{> header}}</header>
 ```
 
-It is importnt to note that the partial name matches the key in the partials object on IndexView.
+It is important to note that the partial name matches the key in the partials object on IndexView.
 
 ## License
 
