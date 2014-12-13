@@ -5,11 +5,22 @@ Hogan Brisket is an adapter for [Hogan.js](http://twitter.github.io/hogan.js/) t
 
 [![Build Status](https://travis-ci.org/ericherdzik/hogan-brisket.svg)](https://travis-ci.org/ericherdzik/hogan-brisket)
 
+## Getting Started
+This Brisket plugin requires Brisket `1.x`
+
+Please refer to [Brisket.View Documentation](https://github.com/bloomberg/brisket/blob/master/docs/brisket.view.md#setting-a-templating-engine) as it describes how to configure Brisket Views for templating.
+
+Note that this plugin does not provide templating or template compilation. It is merely an adapter that enables Brisket to render compiled Hogan.js templates. To integrate Hogan.js into your application, please refer to [Hogan.js](http://twitter.github.io/hogan.js/).
+
+You may install this plugin from your console with the following command:
+
+```bash
+npm install hogan-brisket --save
+```
+
 ## Usage
 
-As a prerequisite, refer to the [Brisket Documentation](https://github.com/bloomberg/brisket/blob/master/docs/brisket.view.md#setting-a-templating-engine) introducing templating for Brisket Views.
-
-Suppose you have a compiled Hogan.js templates file, which should look something like this:
+Once you have Hogan.js integrated into your build, you will have an automatically generated compiled templates file that looks like this somewhere within your application:
 
 ```javascript
 // templates.js
@@ -32,7 +43,7 @@ module.exports = {
 };
 ```
 
-To make these templates available in your Brisket View, you need to specificy an adapter on your View that tells Brisket how to resolve templates. Hogan Brisket provides that adapter:
+To make these templates available in your Brisket View, you simply need to specificy Hogan Brisket as your template adapter:
 
 ```javascript
 // IndexView.js
