@@ -36,6 +36,18 @@ describe("hogan-brisket", function() {
                 hoganAdapter.templateToHTML("test/template");
                 expect(compiledTemplate.render.calls.mostRecent().args[1]).toEqual(mockCompiledTemplates);
             });
+
+            it("allows named partials to be passed", function() {
+                hoganAdapter.templateToHTML("test/template", {}, {
+                    "testPartial": "test/_partial"
+                });
+
+                expect(compiledTemplate.render.calls.mostRecent().args[1]).toEqual({
+                    "test/template": compiledTemplate,
+                    "test/_partial": compiledPartial,
+                    "testPartial": compiledPartial
+                });
+            });
         });
 
         itBehavesLikeAHoganAdapter();
