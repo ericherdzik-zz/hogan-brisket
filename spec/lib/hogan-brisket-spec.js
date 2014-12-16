@@ -10,7 +10,9 @@ describe("hogan-brisket", function() {
     var options;
 
     function mockCompiledTemplate() {
-        return jasmine.createSpy();
+        return {
+            render: jasmine.createSpy()
+        };
     }
 
     beforeEach(function() {
@@ -32,7 +34,7 @@ describe("hogan-brisket", function() {
         describe("#templateToHTML", function() {
             it("makes all partials available to template", function() {
                 hoganAdapter.templateToHTML("test/template");
-                expect(compiledTemplate.calls.mostRecent().args[1]).toEqual(mockCompiledTemplates);
+                expect(compiledTemplate.render.calls.mostRecent().args[1]).toEqual(mockCompiledTemplates);
             });
         });
 
@@ -52,7 +54,7 @@ describe("hogan-brisket", function() {
             describe("when partials are NOT provided", function() {
                 it("does NOT make any partials available to template", function() {
                     hoganAdapter.templateToHTML("test/template");
-                    expect(compiledTemplate.calls.mostRecent().args[1]).toEqual({});
+                    expect(compiledTemplate.render.calls.mostRecent().args[1]).toEqual({});
                 });
             });
 
@@ -62,7 +64,7 @@ describe("hogan-brisket", function() {
                         "testPartial": "test/_partial"
                     });
 
-                    expect(compiledTemplate.calls.mostRecent().args[1]).toEqual({
+                    expect(compiledTemplate.render.calls.mostRecent().args[1]).toEqual({
                         "testPartial": compiledPartial
                     });
                 });
@@ -87,7 +89,7 @@ describe("hogan-brisket", function() {
             describe("when data is NOT provided", function() {
                 it("does NOT forward any data to the template", function() {
                     hoganAdapter.templateToHTML("test/template");
-                    expect(compiledTemplate.calls.mostRecent().args[0]).toBeUndefined();
+                    expect(compiledTemplate.render.calls.mostRecent().args[0]).toBeUndefined();
                 });
             });
 
@@ -102,7 +104,7 @@ describe("hogan-brisket", function() {
 
                 it("forwards data to the template", function() {
                     hoganAdapter.templateToHTML("test/template", data);
-                    expect(compiledTemplate.calls.mostRecent().args[0]).toEqual(data);
+                    expect(compiledTemplate.render.calls.mostRecent().args[0]).toEqual(data);
                 });
             });
         });

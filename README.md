@@ -26,20 +26,9 @@ Once you have Hogan.js integrated into your build, you will have an automaticall
 // templates.js
 var Hogan = require('hogan.js');
 
-var t = {
+module.exports = {
   'templates/index.html' : new Hogan.Template({ ... }),
   'templates/_header.html' : new Hogan.Template({ ... })
-},
-r = function(n) {
-  var tn = t[n];
-  return function(c, p, i) {
-    return tn.render(c, p || t, i);
-  };
-};
-module.exports = {
-  templates : t,
-  'templates/index.html' : r('templates/index.html'),
-  'templates/_header.html' : r('templates/_header.html')
 };
 ```
 
